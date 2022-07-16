@@ -489,7 +489,7 @@ async def button(app, update):
          a=0
          for row in rows:
             d = datetime.today() - datetime.strptime(f"{row[2]}", '%Y-%m-%d')
-            r = datetime.strptime("2021-12-01", '%Y-%m-%d') - datetime.strptime("2021-11-03", '%Y-%m-%d')
+            r = datetime.strptime("2022-12-01", '%Y-%m-%d') - datetime.strptime("2022-11-03", '%Y-%m-%d')
             if d<=r:
                a+=1
                E+=f"{a}). {row[1]} - {row[2]}\n"
@@ -500,9 +500,9 @@ async def button(app, update):
       await update.message.delete()
       if update.message.chat.id in OWNER:
          but = InlineKeyboardMarkup([[InlineKeyboardButton("Kullanıcı ✅", callback_data="Users")], [InlineKeyboardButton("Broadcast 💯", callback_data="Broadcast")],[InlineKeyboardButton("Kullanıcı Ekle", callback_data="New")], [InlineKeyboardButton("Kullanıcıları Kontrol Et", callback_data="Check")]])
-         await app.send_message(chat_id=update.message.chat.id,text=f"**İrregular Bot İLE TECH Yönetici Paneline Hoş Geldiniz**", reply_markup=but)
+         await app.send_message(chat_id=update.message.chat.id,text=f"**Bot İLE TECH Yönetici Paneline Hoş Geldiniz**", reply_markup=but)
       else:
-         await app.send_message(chat_id=update.message.chat.id,text="**Bot'un sahibi değilsiniz \n\nSahibime yazın. By @OrmanCocuklariylaMucadele**")
+         await app.send_message(chat_id=update.message.chat.id,text="**Bot'un sahibi değilsiniz \n\nSahibime yazın. By @Mahoaga**")
    elif "Broadcast" in k:
     try:
       query = await query_msg()
